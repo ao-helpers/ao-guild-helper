@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5241C734-B268-4C3E-ACCC-53F407C877B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOGuildHelper", "src\AOGuildHelper\AOGuildHelper.csproj", "{B42AB4EE-64E5-45E0-9435-FE9758E5425D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extras", "extras", "{E71B7A41-0CCE-464C-8C5D-5C17824F3E08}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B42AB4EE-64E5-45E0-9435-FE9758E5425D} = {5241C734-B268-4C3E-ACCC-53F407C877B7}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B42AB4EE-64E5-45E0-9435-FE9758E5425D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42AB4EE-64E5-45E0-9435-FE9758E5425D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42AB4EE-64E5-45E0-9435-FE9758E5425D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42AB4EE-64E5-45E0-9435-FE9758E5425D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
