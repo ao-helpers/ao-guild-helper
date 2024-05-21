@@ -21,7 +21,9 @@ public class AOGuildMightCategory
     
     public void UpdateFrom(GuildMightCategoryContributionResponseMessage guildMightCategoryContributionResponseMessage)
     {
-        var wascomplete = IsComplete;
+        var timestamp = DateTime.UtcNow;
+
+        var wasComplete = IsComplete;
         
         TotalPoints = guildMightCategoryContributionResponseMessage.TotalPoints / 10000.0;
 
@@ -55,7 +57,7 @@ public class AOGuildMightCategory
         
         AnsiConsole.WriteLine($"Might {Category}: Added {added}, updated {updated} out of {guildMightCategoryContributionResponseMessage.Contributors.Length} (total {guildMightCategoryContributionResponseMessage.TotalContributors} contributors)");
 
-        if (!wascomplete && IsComplete)
+        if (!wasComplete && IsComplete)
         {
             var path = $"might-points-{Category}-{DateTime.UtcNow:yyyy-MM-dd_HHmmss}.csv";
             
@@ -64,10 +66,10 @@ public class AOGuildMightCategory
             using var stream = File.Open(path, FileMode.Create, FileAccess.Write, FileShare.None);
             using var writer = new StreamWriter(stream, new UTF8Encoding(false));
 
-            writer.WriteLine($"Name,Amount");
+            writer.WriteLine($"Name,Amount,Timestamp");
             foreach (var contributor in Contributors.OrderByDescending(x => x.Amount))
             {
-                writer.WriteLine($"{contributor.Name},{contributor.Amount.ToString(CultureInfo.InvariantCulture)}");
+                writer.WriteLine($"{contributor.Name},{contributor.Amount.ToString(CultureInfo.InvariantCulture)},{timestamp.ToString("o", CultureInfo.InvariantCulture)}");
             }
         }
     }
