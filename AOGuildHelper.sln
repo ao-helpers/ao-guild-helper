@@ -8,6 +8,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extras", "extras", "{E71B7A
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		README.md = README.md
+		Directory.Build.props = Directory.Build.props
+		version.json = version.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{8850ADB7-1C6A-4C4A-B1D4-F3C79F6A7274}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A570990A-7BCE-4D5F-9D81-8C231A30B4BD}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\publish.yml = .github\workflows\publish.yml
+		.github\workflows\build.yml = .github\workflows\build.yml
 	EndProjectSection
 EndProject
 Global
@@ -17,6 +27,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B42AB4EE-64E5-45E0-9435-FE9758E5425D} = {5241C734-B268-4C3E-ACCC-53F407C877B7}
+		{8850ADB7-1C6A-4C4A-B1D4-F3C79F6A7274} = {E71B7A41-0CCE-464C-8C5D-5C17824F3E08}
+		{A570990A-7BCE-4D5F-9D81-8C231A30B4BD} = {8850ADB7-1C6A-4C4A-B1D4-F3C79F6A7274}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B42AB4EE-64E5-45E0-9435-FE9758E5425D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

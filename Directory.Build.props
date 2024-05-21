@@ -1,0 +1,20 @@
+<Project>
+
+  <PropertyGroup>
+    <Product>AO Guild Helper</Product>
+    <Authors>Lukáš Novotný</Authors>
+    <RepositoryUrl>https://github.com/ao-helpers/ao-guild-helper</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <LangVersion>12.0</LangVersion>
+    <Deterministic>true</Deterministic>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Nerdbank.GitVersioning" Condition="!Exists('packages.config')">
+      <PrivateAssets>all</PrivateAssets>
+      <Version>3.6.133</Version>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
